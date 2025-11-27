@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  # Servicio de la API FastAPI
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: opensky_aviation_api
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      # Montar el código para desarrollo (hot-reload)
+      - ./main.py:/app/main.py
+    restart: unless-stopped
+    networks:
+      - aviation_network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  aviation_network:
+    driver: bridge

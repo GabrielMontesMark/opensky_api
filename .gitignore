@@ -1,0 +1,41 @@
+# Entornos virtuales
+venv/
+env/
+ENV/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+.Python
+
+# Archivos de configuración sensibles
+.env
+.env.local
+
+# Logs
+*.log
+docker-compose.log
+
+# Archivos temporales
+*.tmp
+
+# Archivos de prueba específicos
+prueba.py
+prueba3.py
+prueba4.py
+prueba5.py
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,50 @@
+# Entornos virtuales
+venv/
+env/
+ENV/
+.venv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Archivos de prueba
+prueba.py
+prueba3.py
+prueba4.py
+prueba5.py
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Git
+.git/
+.gitignore
+
+# Docker
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Excluir partes innecesarias de opensky-api
+opensky-api/.git/
+opensky-api/.github/
+opensky-api/docs/
+opensky-api/java/
+opensky-api/python/__pycache__/
+opensky-api/python/*.egg-info/
+opensky-api/python/test_*.py
