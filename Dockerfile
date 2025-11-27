@@ -1,6 +1,11 @@
 # Usar imagen base oficial de Python
 FROM python:3.11-slim
 
+# Instalar curl para healthcheck
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
 # Establecer directorio de trabajo
 WORKDIR /app
 
