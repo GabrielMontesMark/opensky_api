@@ -13,7 +13,7 @@ services:
       - PYTHONUNBUFFERED=1
     volumes:
       # Montar el código para desarrollo (hot-reload)
-      - ./main.py:/app/main.py
+      - ./main.py:/opt/odoo/opensky_api/main.py
     restart: unless-stopped
     networks:
       - aviation_network
