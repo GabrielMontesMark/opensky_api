@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 from opensky_api import OpenSkyApi
 import time
 from typing import Optional
-from fastapi.middleware.cors import CORSMiddleware
+# from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="OpenSky Aviation API", version="1.0.0")
 
@@ -10,13 +10,13 @@ app = FastAPI(title="OpenSky Aviation API", version="1.0.0")
 api = OpenSkyApi()
 
 # Configurar CORS
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=["*"],
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+# )
 
 @app.get("/")
 def read_root():
